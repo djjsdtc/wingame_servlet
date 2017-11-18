@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>了解 Windows 7 中的游戏</title>
+<script>
+var a=new Array("internet.htm","card.htm","chess.htm","purbleplace.htm");
+var b=0;
+function NextFunc(){
+	if(++b==4) b=0;
+	document.getElementById("mainframe").src=a[b];
+}
+function PrevFunc(){
+	if(--b==-1) b=3;
+	document.getElementById("mainframe").src=a[b];
+}
+</script>
+</head>
+<body>
+<h1>了解 Windows 7 中的游戏</h1>
+<p>您准备好体验游戏的乐趣了吗？Windows 7 附带了多种可供用户娱乐的游戏。其中包括棋盘游戏、纸牌游戏、多人 Internet 游戏，甚至还有供儿童娱乐的游戏。您可以在“游戏”文件夹中找到所有这些游戏。若要开始游戏，只需打开文件夹，并双击游戏图标。</p>
+<p>您能看到哪些游戏将取决于您使用的 Windows 7 版本。有些游戏只有在 Windows 的高级版中可用。在 Windows 7 企业版中，游戏默认是关闭的。</p>
+<p align="center">
+<button onClick="PrevFunc()">&lt;&lt;</button>
+<button onClick="document.getElementById('mainframe').src=a[0];b=0;">Internet 游戏</button>
+<button onClick="document.getElementById('mainframe').src=a[1];b=1;">纸牌游戏</button>
+<button onClick="document.getElementById('mainframe').src=a[2];b=2;">棋盘游戏</button>
+<button onClick="document.getElementById('mainframe').src=a[3];b=3;">儿童游戏</button>
+<button onClick="NextFunc()">&gt;&gt;</button>
+</p>
+<hr>
+<iframe src="internet.htm" id="mainframe" frameborder="0" width="100%" height="100%"></iframe>
+</body>
+</html>
